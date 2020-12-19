@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js App</title>
+</head>
+<body>
+
+<div id="app">
+    <p v-bind:Class="{child: isChild,'is-active':isActive}">Text</p>
+    <p v-bind:style="{color: textColor,backgroundColor:bgColor}">Text</p>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="main.js"></script>
+</body>
+</html>

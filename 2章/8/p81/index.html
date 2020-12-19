@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js App</title>
+</head>
+<body>
+
+<div id="app">
+
+    <ul>
+        <li v-for="(item,index) in list" v-bind:key="item.id" v-if="item.hp">
+            ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+
+            <span v-if="item.hp<50">瀕死!</span>
+
+            <button v-on:click="doAttack(index)">攻撃する</button>
+        </li>
+
+
+        <span v-for="numbers in [1, 5, 10, 15]">{{ numbers }}</span>
+
+    </ul>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="main.js"></script>
+</body>
+</html>
